@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "netflixgpt-7069b",
+    "netflix-clone": "netflixgpt-7069b"
+  },
+  "targets": {},
+  "etags": {}
+}
