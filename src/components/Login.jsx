@@ -10,6 +10,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BACKGROUND_LOGO } from "../utils/constants";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -58,7 +59,6 @@ const Login = () => {
             .then(() => {
               const { uid, email, displayName } = auth.currentUser; //getting the current use after the update
               dispatch(addUser({ uid: uid, email: email, name: displayName }));
-              navigate("/browse");
             })
             .catch((error) => {
               setErrorMessage(error);
@@ -78,7 +78,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -95,10 +94,7 @@ const Login = () => {
       </div>
 
       <div className="absolute">
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/258d0f77-2241-4282-b613-8354a7675d1a/web/IN-en-20250721-TRIFECTA-perspective_cadc8408-df6e-4313-a05d-daa9dcac139f_large.jpg"
-          alt="logo-background"
-        />
+        <img src={BACKGROUND_LOGO} alt="logo-background" />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
