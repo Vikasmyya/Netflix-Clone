@@ -15,3 +15,12 @@ export const API_OPTIONS = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNDcyNzZhNmE3ZDljMGZjYTRiODAyNTUxZTVmNDAyOSIsIm5iZiI6MTc1NDA0MTYyNy4zNjMwMDAyLCJzdWIiOiI2ODhjOGQxYjkyNGQzYWExYjViN2U1OTMiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.PgJtLWkYscHUJ7t8BOFKee8Td_b-q4j1FuPzCdd54vk",
   },
 };
+
+export const POSTER_URL = "https://image.tmdb.org/t/p/w500";
+
+export const POPULAR_MOVIE_URL = "https://api.themoviedb.org/3/movie/popular";
+
+export const TOP_RATED_MOVIE_URL =
+  "https://api.themoviedb.org/3/movie/top_rated";
+
+export const UPCOMING_MOVIE_URL = "https://api.themoviedb.org/3/movie/upcoming";
