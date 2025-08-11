@@ -7,6 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../utils/userSlice";
 import { NETFLIX_LOGO } from "../utils/constants";
 import { useState } from "react";
+import { changeSearch } from "../utils/searchGptSlice";
 
 const Header = () => {
   const [authChecked, setAuthChecked] = useState(false);
@@ -21,6 +22,10 @@ const Header = () => {
       .catch((error) => {
         navigate("/error");
       });
+  };
+
+  const handleToggleSearch = () => {
+    dispatch(changeSearch());
   };
 
   //Set data in store using firebase function
@@ -48,7 +53,14 @@ const Header = () => {
         <div className="flex items-center">
           <h3 className="p-2 m-5 text-lg text-white">Welcome {user?.name}</h3>
           <button
-            className="bg-red-500 p-2 m-4 w-20 h-12 text-white rounded-lg hover:bg-red-600 cursor-pointer"
+            className="p-2 m-2 bg-green-800 rounded-lg"
+            onClick={handleToggleSearch}
+          >
+            Serch Gpt
+          </button>
+
+          <button
+            className="bg-red-500 p-2 m-4 text-white rounded-lg hover:bg-red-600 cursor-pointer"
             onClick={handleSignOut}
           >
             Sign Out

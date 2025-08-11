@@ -3,7 +3,7 @@ import VedioContainer from "./VedioConatiner";
 import { useSelector } from "react-redux";
 
 const MainContainer = () => {
-  const mainMovie = useSelector((store) => store?.movie?.nowPlayingMovie?.[1]);
+  const mainMovie = useSelector((store) => store?.movie?.nowPlayingMovie?.[3]);
 
   if (!mainMovie) return null;
 

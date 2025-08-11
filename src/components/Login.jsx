@@ -93,8 +93,12 @@ const Login = () => {
         <Header />
       </div>
 
-      <div className="absolute">
-        <img src={BACKGROUND_LOGO} alt="logo-background" />
+      <div className="absolute w-full h-screen">
+        <img
+          src={BACKGROUND_LOGO}
+          alt="logo-background"
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
